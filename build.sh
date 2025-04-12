@@ -21,4 +21,5 @@ else
     build_module "$1"
 fi
 
-echo "✅ 构建完成！输出目录: www/pkg/"
+echo ""
+echo "🎉🎉🎉 [$(date +'%Y-%m-%d %H:%M:%S')] 构建完成！输出目录: www/pkg/"

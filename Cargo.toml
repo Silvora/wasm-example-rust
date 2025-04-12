@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "crates/utils",
+    "crates/image",
+    "crates/math"  # 共享代码
+]
+
+resolver = "3"  # 统一依赖版本

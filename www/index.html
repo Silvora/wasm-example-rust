@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+
+        async function run(name) {
+            const wasm = await import(`./pkg/${name}/${name}.js`);
+            await wasm.default(); // 初始化
+            const { greet, add } = wasm; // 获取导出的函数
+            console.log(greet('red'),'------------>',add(100,100)); // 调用函数
+        }
+        run('utils');
+
+    </script>
+</body>
+</html>
